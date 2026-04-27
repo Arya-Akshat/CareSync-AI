@@ -103,11 +103,21 @@ class BundleBuilderAI:
 
         # 5. Global Summary
         count = len(output_bundles)
+        failure_reason = None
+        if count == 0:
+            if not candidates:
+                failure_reason = "No candidate products found in catalog."
+            elif all(p["price"] > (budget or 9999) for p in candidates):
+                failure_reason = "All available products exceed your budget."
+            else:
+                failure_reason = "No bundles met the minimum quality/relevance threshold."
+
         summary = {
             "avg_aov_lift": round(total_lift / count, 1) if count else 0,
             "avg_confidence": round(total_conf / count, 2) if count else 0,
             "avg_conversion_probability": round(total_conv / count, 2) if count else 0,
-            "bundles_generated": count
+            "bundles_generated": count,
+            "failure_reason": failure_reason
         }
 
         return {

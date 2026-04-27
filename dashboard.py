@@ -163,7 +163,14 @@ with tab_dashboard:
             result = engine.process_request(payload)
         
         if not result["bundles"]:
-            st.warning(t["no_bundles"])
+            reason = result["system_summary"]["failure_reason"]
+            # Translate common reasons
+            if lang == "Arabic (العربية)":
+                if "budget" in reason.lower(): reason = "جميع المنتجات المتاحة تتجاوز ميزانيتك."
+                elif "quality" in reason.lower(): reason = "لم تستوفِ أي حزم الحد الأدنى من معايير الجودة."
+                else: reason = "لم يتم العثور على منتجات في الكتالوج."
+            
+            st.warning(f"⚠️ {reason}")
         else:
             summary = result["system_summary"]
             col1, col2, col3, col4 = st.columns(4)
