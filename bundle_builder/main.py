@@ -1,10 +1,10 @@
 
 import json
-from .dataset import PRODUCTS
-from .retrieval import RetrievalLayer
-from .bundle_generator import BundleGenerator
-from .ranking import RankingEngine
-from .llm_layer import LLMLayer
+from bundle_builder.dataset import PRODUCTS
+from bundle_builder.retrieval import RetrievalLayer
+from bundle_builder.bundle_generator import BundleGenerator
+from bundle_builder.ranking import RankingEngine
+from bundle_builder.llm_layer import LLMLayer
 
 class BundleBuilderAI:
     def __init__(self):
@@ -109,8 +109,16 @@ def run_evaluation_suite():
     
     test_cases = [
         {"name": "TEST 1: Diapers Utility", "data": {"products": [PRODUCTS[0]], "budget": 1000}},
+        {"name": "TEST 2: Toy Relevance", "data": {"products": [PRODUCTS[6]], "budget": 1000}},
+        {"name": "TEST 3: Multi-item Duplicate Check", "data": {"products": [PRODUCTS[0], PRODUCTS[1]], "budget": 1500}},
+        {"name": "TEST 4: Budget Constraint", "data": {"products": [PRODUCTS[0]], "budget": 600}},
+        {"name": "TEST 5: AOV Lift Impact", "data": {"products": [PRODUCTS[0]], "budget": 1000}},
+        {"name": "TEST 6: Low Utility Filter", "data": {"products": [PRODUCTS[12]], "budget": 1000}},
         {"name": "TEST 7: High Utility Conversion", "data": {"products": [PRODUCTS[0]], "budget": 1000}},
-        {"name": "TEST 8: Expensive Irrelevant Filter", "data": {"products": [PRODUCTS[12]], "budget": 150}} # Shampoo (p13) + expensive items
+        {"name": "TEST 8: Expensive Irrelevant Filter", "data": {"products": [PRODUCTS[12]], "budget": 150}},
+        {"name": "TEST 9: Extreme Budget (Zero)", "data": {"products": [PRODUCTS[0]], "budget": 0}},
+        {"name": "TEST 10: Cross-Category Synergy", "data": {"products": [PRODUCTS[3]], "budget": 1500}}, # Bottle -> Sterilizer
+        {"name": "TEST 11: Age-Mismatch Penalty", "data": {"products": [PRODUCTS[0]], "baby_age": "2+ years", "budget": 1000}}
     ]
 
     print("\n" + "="*50)

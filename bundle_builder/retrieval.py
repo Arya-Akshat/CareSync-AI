@@ -1,5 +1,5 @@
 
-from .dataset import PRODUCTS
+from bundle_builder.dataset import PRODUCTS
 
 # Rule-based mapping
 RULE_MAPPING = {

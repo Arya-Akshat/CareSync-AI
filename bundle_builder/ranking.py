@@ -1,5 +1,5 @@
 
-from .evaluation import (
+from bundle_builder.evaluation import (
     evaluate_relevance, 
     evaluate_utility, 
     evaluate_price_fit, 
@@ -10,8 +10,8 @@ from .evaluation import (
     validate_bundle,
     get_confidence_score
 )
-from .aov import estimate_aov_lift
-from .conversion import estimate_conversion_probability
+from bundle_builder.aov import estimate_aov_lift
+from bundle_builder.conversion import estimate_conversion_probability
 
 class RankingEngine:
     def __init__(self, budget=None, baby_age=None):

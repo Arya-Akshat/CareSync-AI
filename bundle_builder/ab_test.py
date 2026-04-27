@@ -1,8 +1,8 @@
 
 import random
-from .main import BundleBuilderAI, PRODUCTS
-from .evaluation import evaluate_relevance, evaluate_utility, evaluate_price_fit
-from .conversion import estimate_conversion_probability
+from bundle_builder.main import BundleBuilderAI, PRODUCTS
+from bundle_builder.evaluation import evaluate_relevance, evaluate_utility, evaluate_price_fit
+from bundle_builder.conversion import estimate_conversion_probability
 
 class ABTestSimulator:
     def __init__(self, seed=42):

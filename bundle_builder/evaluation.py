@@ -1,5 +1,5 @@
 
-from .dataset import PRODUCTS
+from bundle_builder.dataset import PRODUCTS
 
 def evaluate_relevance(bundle, input_products, baby_age=None):
     """Score 0-1 based on category alignment and tag overlap."""
