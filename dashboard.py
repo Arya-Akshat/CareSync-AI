@@ -5,6 +5,8 @@ import plotly.express as px
 from bundle_builder.main import BundleBuilderAI, PRODUCTS
 from bundle_builder.ab_test import ABTestSimulator
 
+import subprocess
+
 # Initialize
 @st.cache_resource
 def get_engine():
@@ -14,10 +16,20 @@ def get_engine():
 def get_simulator():
     return ABTestSimulator()
 
+def get_git_hash():
+    try:
+        return subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode('ascii').strip()
+    except:
+        return "main"
+
 engine = get_engine()
 simulator = get_simulator()
 
 st.set_page_config(page_title="Bundle Builder AI Decision Lab", layout="wide")
+
+# --- Sidebar ---
+st.sidebar.markdown(f"**Build:** `{get_git_hash()}`")
+st.sidebar.divider()
 
 # --- Tabs ---
 tab_dashboard, tab_ab_test = st.tabs(["🚀 Decision Dashboard", "🧪 A/B Simulation Lab"])
