@@ -23,7 +23,7 @@ class RankingEngine:
         utility = evaluate_utility(bundle_items, input_products)
         
         # Failure Detection
-        if relevance < 0.3 or utility < 0.3:
+        if relevance < 0.2 or utility < 0.2:
             return None
             
         metrics = {
@@ -44,7 +44,7 @@ class RankingEngine:
         conv_prob = estimate_conversion_probability(input_products, bundle_items, metrics)
         
         # Smart Filter: Reject low conversion
-        if conv_prob < 0.4:
+        if conv_prob < 0.35:
             return None
             
         # Final Decision Score

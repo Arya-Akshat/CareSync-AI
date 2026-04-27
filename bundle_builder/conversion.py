@@ -9,7 +9,7 @@ def estimate_conversion_probability(input_products, bundle, metrics):
     price_fit = metrics.get("price_fit", 0)
     
     # Base score
-    conversion = (0.5 * relevance) + (0.3 * utility) + (0.2 * price_fit)
+    conversion = (0.6 * relevance) + (0.3 * utility) + (0.1 * price_fit)
     
     # Price ratio analysis
     base_price = sum(p["price"] for p in input_products)
@@ -26,7 +26,7 @@ def estimate_conversion_probability(input_products, bundle, metrics):
         
     # Synergy boosts
     if utility >= 0.8:
-        conversion += 0.1
+        conversion += 0.2
         
     # Strong category match boost
     input_cats = {p["category"] for p in input_products}

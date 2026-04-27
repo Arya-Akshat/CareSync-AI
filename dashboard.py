@@ -100,9 +100,9 @@ with tab_ab_test:
         
         # Uplift Row
         u1, u2, u3 = st.columns(3)
-        u1.metric("Revenue Uplift", f"+{sim_res['uplift']['revenue_increase']}%", delta_color="normal")
-        u2.metric("AOV Uplift", f"+{sim_res['uplift']['aov_increase']}%")
-        u3.metric("Conversion Uplift", f"+{sim_res['uplift']['conversion_increase']}%")
+        u1.metric("Revenue Uplift", f"{sim_res['uplift']['revenue_increase']}%", delta=sim_res['uplift']['revenue_increase'])
+        u2.metric("AOV Uplift", f"{sim_res['uplift']['aov_increase']}%", delta=sim_res['uplift']['aov_increase'])
+        u3.metric("Conversion Uplift", f"{sim_res['uplift']['conversion_increase']}%", delta=sim_res['uplift']['conversion_increase'])
         
         st.divider()
         
