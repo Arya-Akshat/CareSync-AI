@@ -68,7 +68,7 @@ In our A/B Simulation Lab, the CareSync AI engine consistently outperforms the b
 CareSync AI is a decision-driven bundling engine for Mumzworld. It uses routine-based retrieval and business-weighted ranking to generate synergistic product bundles that optimize for AOV and conversion. It features a full bilingual dashboard and a Monte Carlo simulation lab to prove business uplift.
 
 ### 🤖 AI Usage Note
-- **Stack**: Antigravity (Gemini 2.0 Flash) for architecture and logic implementation.
+- **Stack**: Antigravity (Gemini 3.0 Flash) for architecture and logic implementation.
 - **Method**: Pair-coding for engine development; Agent loops for data synthesis; Iterative prompting for the conversion model calibration.
 
 ### ⏱ Time Log
