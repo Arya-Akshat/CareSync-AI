@@ -47,6 +47,18 @@ class BundleBuilderAI:
                 "business_score": metrics["business_score"]
             })
 
+        # --- FALLBACK: If no ideal bundles found, offer the best possible guess ---
+        if not scored_bundles and candidate_bundles:
+            for cb in candidate_bundles[:2]:
+                metrics = ranker.get_bundle_metrics(products, cb, force=True)
+                if metrics:
+                    scored_bundles.append({
+                        "items": cb,
+                        "metrics": metrics,
+                        "decision_score": metrics["decision_score"],
+                        "business_score": metrics["business_score"]
+                    })
+
         # Sort by decision_score (primary) then business_score
         scored_bundles.sort(key=lambda x: (x["decision_score"], x["business_score"]), reverse=True)
         top_bundles = scored_bundles[:3]
@@ -65,7 +77,7 @@ class BundleBuilderAI:
             en, ar, _ = self.llm.generate_reasoning(products, bundle_items, metrics["conversion_probability"])
             
             bundle_data = {
-                "items": [{"id": p["id"], "name": p["name"], "price": p["price"]} for p in bundle_items],
+                "items": [{"id": p["id"], "name": p["name"], "name_ar": p.get("name_ar", p["name"]), "price": p["price"]} for p in bundle_items],
                 "total_price": aov_data["total_price"],
                 "price_increase": aov_data["price_increase"],
                 "aov_lift_percent": aov_data["aov_lift_percent"],

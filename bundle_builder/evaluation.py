@@ -86,14 +86,14 @@ def calculate_final_score(metrics):
     return round(score, 2)
 
 def calculate_business_score(final_score, lift_raw):
-    """Business Score = 60% system quality + 40% revenue impact."""
+    """Business Score = 50% system quality + 50% revenue impact."""
     normalized_aov_lift = min(1, lift_raw / 0.5)
-    score = (0.6 * final_score) + (0.4 * normalized_aov_lift)
+    score = (0.5 * final_score) + (0.5 * normalized_aov_lift)
     return round(score, 2), round(normalized_aov_lift, 2)
 
 def calculate_decision_score(business_score, conversion_prob):
-    """Balanced Decision Score: Impact vs Acceptance."""
-    score = (0.5 * business_score) + (0.5 * conversion_prob)
+    """Balanced Decision Score: Favoring Business Impact for Revenue Growth."""
+    score = (0.6 * business_score) + (0.4 * conversion_prob)
     return round(score, 2)
 
 def validate_bundle(bundle):

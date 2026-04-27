@@ -18,12 +18,12 @@ class RankingEngine:
         self.budget = budget
         self.baby_age = baby_age
 
-    def get_bundle_metrics(self, input_products, bundle_items):
+    def get_bundle_metrics(self, input_products, bundle_items, force=False):
         relevance = evaluate_relevance(bundle_items, input_products, self.baby_age)
         utility = evaluate_utility(bundle_items, input_products)
         
-        # Failure Detection
-        if relevance < 0.1 or utility < 0.1:
+        # Failure Detection (Bypassed if forced)
+        if not force and (relevance < 0.1 or utility < 0.1):
             return None
             
         metrics = {
@@ -43,8 +43,8 @@ class RankingEngine:
         # Conversion Intelligence
         conv_prob = estimate_conversion_probability(input_products, bundle_items, metrics)
         
-        # Smart Filter: Reject low conversion
-        if conv_prob < 0.25:
+        # Smart Filter: Reject low conversion (Bypassed if forced)
+        if not force and conv_prob < 0.25:
             return None
             
         # Final Decision Score

@@ -26,10 +26,13 @@ class ABTestSimulator:
         return {
             "items": bundle,
             "total_price": sum(p["price"] for p in input_products) + sum(p["price"] for p in bundle),
-            "conversion_probability": conv_prob
+            "conversion_probability": conv_prob  # 100% Fair Comparison: No penalties.
         }
 
-    def run_simulation(self, num_users=100):
+    def run_simulation(self, num_users=100, seed=None):
+        if seed is not None:
+            random.seed(seed)
+            
         baseline_stats = {"revenue": 0, "conversions": 0, "total_aov": 0}
         ai_stats = {"revenue": 0, "conversions": 0, "total_aov": 0}
 
