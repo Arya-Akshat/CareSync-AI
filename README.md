@@ -5,7 +5,8 @@
 
 CareSync AI is a production-ready package designed to optimize product bundling for **Revenue**, **Relevance**, and **Conversion**. Unlike simple recommendation engines, CareSync acts as a business decision layer that simulates outcomes before suggesting actions.
 
-🔗 **Live Demo**: [Streamlit App](https://arya-akshat-caresync-ai-dashboard-ofphhi.streamlit.app/)
+🔗 **Live Demo**: [Streamlit App](https://arya-akshat-caresync-ai-dashboard-ofphhi.streamlit.app/)  
+🎥 **Walkthrough Video**: [Loom Link Here](https://www.loom.com/...)
 
 ✔ **Runs locally in under 2 minutes**  
 ✔ **Fully Bilingual (English & Arabic)**  
