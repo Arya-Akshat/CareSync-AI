@@ -1,0 +1,19 @@
+
+[project]
+name = "caresync-ai"
+version = "0.1.0"
+description = "Decision Intelligence Engine for Mumzworld Bundle Optimization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.30.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+]
