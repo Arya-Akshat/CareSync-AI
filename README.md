@@ -1,5 +1,7 @@
 
 # CareSync AI: Decision-Driven Bundle Optimizer
+> A decision engine that optimizes product bundling for both revenue and conversion using retrieval, scoring, and simulation.
+
 **Track: A | Mumzworld AI Engineering Intern Assessment**
 
 CareSync AI is an **Attach Rate Optimizer** that solves the "Cold Start Bundle" problem for e-commerce. It uses a Decision Intelligence Engine to balance **customer relevance** with **business revenue**.
@@ -9,6 +11,26 @@ CareSync AI is an **Attach Rate Optimizer** that solves the "Cold Start Bundle" 
 ## 📂 Documentation
 - **Technical Evaluation**: [EVALS.md](./EVALS.md) (11 Test Cases & Proof of Correctness)
 - **Process & Iteration**: [PROCESS.md](./PROCESS.md) (Prompts, Dead Ends, & "Show Your Work")
+
+---
+
+## 🚀 Setup and Run (Under 2 Minutes)
+✔ **Runs locally in under 2 minutes**  
+✔ **No external APIs required**  
+✔ **Fully self-contained mock dataset**
+
+1. **Install Dependencies**:
+   ```bash
+   pip install streamlit pandas plotly
+   ```
+2. **Launch Dashboard**:
+   ```bash
+   streamlit run dashboard.py
+   ```
+3. **Run Evaluation Suite**:
+   ```bash
+   python3 -m bundle_builder.main
+   ```
 
 ---
 
@@ -56,22 +78,10 @@ The system is built to refuse rather than guess.
 
 ---
 
-## 🚀 Setup and Run (Under 2 Minutes)
-1. **Install Dependencies**:
-   ```bash
-   pip install streamlit pandas plotly
-   ```
-2. **Launch Dashboard**:
-   ```bash
-   streamlit run dashboard.py
-   ```
-
----
-
 ## ⏳ Time Log & Tooling
 - **Total Time**: 5 hours (Discovery: 1h, Logic: 2.5h, UI/Docs: 1.5h)
 - **Harness**: Antigravity (Gemini 2.0 Flash) & Llama 3.3 70B for logic/reasoning.
-- **Method**: Full agent loops for scoring modules; manual intervention for Native Arabic context.
+- **Method**: Full agent loops for data/scoring modules; manual intervention for Native Arabic context.
 
 ---
 
