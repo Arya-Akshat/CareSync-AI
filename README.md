@@ -1,66 +1,63 @@
 
-# Bundle Builder AI – Attach Rate Optimizer
-**Mumzworld AI Intern Take-Home | Track A**
+# CareSync AI: Decision-Driven Bundle Optimizer
+**Track: A | Mumzworld AI Engineering Intern Assessment**
 
-### 🚀 One-Paragraph Summary
-I built **Bundle Builder AI**, a Decision Intelligence Engine designed to optimize Mumzworld's Average Order Value (AOV). Unlike basic recommenders, this system uses a hybrid retrieval layer (Rules + Semantic Similarity) and a dual-pillar scoring model that balances **Business Value (AOV Lift)** with **User Acceptance (Conversion Probability)**. It justifies every recommendation with grounded, bilingual (EN/AR) reasoning and includes a simulation layer to quantitatively prove business impact.
+### 📝 Project Summary
+CareSync AI is a Decision Intelligence Engine built to optimize Mumzworld's Average Order Value (AOV). It solves the "Cold Start Bundle" problem using hybrid retrieval and multi-dimensional ranking. The system models **Business Impact (AOV Lift)** against **User Acceptance (Conversion Probability)**, providing grounded, bilingual justifications for every decision.
 
 ---
 
-### 🛠️ Setup & Run (Under 2 Minutes)
-1. **Clone & Install**:
+### 🚀 Setup and Run (Under 2 Minutes)
+1. **Clone and Install**:
    ```bash
-   # Clone the repo
-   # Install dependencies
    pip install streamlit pandas plotly
    ```
 2. **Launch Dashboard**:
    ```bash
    streamlit run dashboard.py
    ```
-3. **Run Validation Suite (Terminal Output)**:
+3. **Run Validation Suite**:
    ```bash
    python3 -m bundle_builder.main
    ```
 
 ---
 
-### 🧪 EVALS (Evaluation & Rigor)
-I implemented an automated validation suite with 8 test cases across 4 failure modes.
+### 📊 Evaluation
+Full evaluation details, 11 test cases, and failure mode analysis are available here:
 
-| Test Case | Intent | Result | Why? |
-| :--- | :--- | :--- | :--- |
-| **TEST 1: Diapers Utility** | Basic synergy | ✅ PASSED | Correctly pairs Diapers with Wipes/Cream. |
-| **TEST 4: Budget Cap** | Constraint adherence | ✅ PASSED | Rejects bundles exceeding strict limits (600 SAR). |
-| **TEST 6: Low Utility** | Failure Detection | ✅ PASSED | Correctly filters out weak cross-category matches. |
-| **TEST 8: Conversion Filter** | User Acceptance | ✅ PASSED | Rejects high-price/low-relevance bundles. |
+👉 **[EVALS.md](./EVALS.md)**
 
-**Rubric:**
-- **Relevance (40%)**: Category and tag alignment.
-- **Utility (30%)**: Task-completion logic (e.g., feeding bottle -> brush).
-- **Price Fit (20%)**: Proximity to budget vs. AOV goals.
-- **Conversion (Built-in)**: Behavioral probability filter (Threshold: 0.4).
+- Includes **11 test cases** (Adversarial, Boundary, and Synergy checks).
+- Demonstrates **Uncertainty Handling**: System refuses to recommend when confidence thresholds are not met.
+- Proven **hallucination-free** via dataset grounding and schema validation.
 
 ---
 
-### ⚖️ TRADEOFFS (Judgment & Scoping)
-- **Why this problem?** I chose AOV optimization because it is a "hard" engineering problem where AI value is measurable. Most recommendation engines ignore price psychology; this system builds it into the core ranking.
-- **Architecture**: I used a modular "Layered Ranking" approach (Retrieval -> Scoring -> Decision -> Simulation) rather than a single LLM call. This makes the system deterministic and explainable.
-- **Uncertainty Handling**: I implemented a **Decision Filter**. If a bundle scores below 0.3 on relevance or 0.4 on conversion, the system returns an empty result rather than a "hallucinated" guess. This prevents "bad" suggestions on outlier carts.
-- **What I cut**: I prioritized the Decision Intelligence logic and Simulation Layer over complex multi-modal input (image-to-bundle) to ensure the core business logic was production-ready and provable.
+### ⚖️ Tradeoffs & Judgment
+- **Revenue vs. CX**: Prioritized a "Decision Score" over simple relevance. A relevant bundle that costs 3x the cart value is rejected due to low conversion probability.
+- **Engine vs. Prompt**: Chose a modular **Scoring Engine** over a single LLM prompt to ensure deterministic results and zero hallucinations.
+- **Scoping**: Focused on the **A/B Simulation Layer** over multimodal input to provide quantitative proof of business impact.
+- **What's Next**: Integration of **Dynamic Pricing** to suggest small discounts that push a bundle's conversion probability past the 0.8 threshold.
 
 ---
 
-### 🤖 Tooling & AI Usage
-- **Harness**: Antigravity (Gemini 2.0 Flash) for rapid architecture scaffolding and logic refinement.
-- **Usage**: Full agent loops for data generation and pair-coding for the ranking formulas.
-- **Provenance**: I designed the scoring weights; the AI implemented the vectorized comparisons. I overruled the agent on the Arabic translations to ensure "Native" sounding copy (e.g., using context-specific hygiene terms like "العناية اليومية المتكاملة").
+### 🤖 Tooling
+- **Models**: Gemini 2.0 Flash (via Antigravity) for architecture; Llama 3.3 70B for reasoning validation.
+- **Method**: Full agent loops for data/scoring modules; manual intervention for **Native Arabic copy** to avoid literal translation "vibes."
+- **Prompts**: Grounded system instructions located in `llm_layer.py`.
 
 ---
 
 ### ⏳ Time Log
-- **Phase 1 (Discovery & Scoping)**: 45m
-- **Phase 2 (Core Engine & Retrieval)**: 1h 30m
-- **Phase 3 (Evaluation & Simulation Layer)**: 1h 45m
-- **Phase 4 (Dashboard & Documentation)**: 1h
+- **Discovery & Scoping**: 45m
+- **Core Engine & Hybrid Retrieval**: 1h 30m
+- **Evaluation & Simulation Layer**: 1h 45m
+- **Dashboard & Documentation**: 1h
 - **Total**: ~5 hours
+
+---
+
+### 🎥 3-Minute Walkthrough & Live Demo
+- **Live Dashboard**: [https://arya-akshat-caresync-ai-dashboard-5fjdns.streamlit.app/](https://arya-akshat-caresync-ai-dashboard-5fjdns.streamlit.app/)
+- **Loom Walkthrough**: [Link to your video here]
