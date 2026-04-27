@@ -1,0 +1,28 @@
+
+PRODUCTS = [
+    {"id": "p1", "name": "Pampers Premium Protection Size 3", "category": "baby_care", "tags": ["diapers", "hygiene", "infant"], "price": 450, "description": "Ultra soft diapers with 12h leak protection."},
+    {"id": "p2", "name": "Huggies Pure Baby Wipes", "category": "baby_care", "tags": ["wipes", "cleaning", "infant"], "price": 120, "description": "Fragrance-free wipes for sensitive skin."},
+    {"id": "p3", "name": "Sudocrem Antiseptic Healing Cream", "category": "baby_care", "tags": ["rash_cream", "health", "skin"], "price": 180, "description": "Soothing cream for diaper rash and skin irritation."},
+    {"id": "p4", "name": "Philips Avent Natural Bottle 260ml", "category": "feeding", "tags": ["bottle", "feeding", "newborn"], "price": 350, "description": "Easy to combine with breastfeeding."},
+    {"id": "p5", "name": "Tommee Tippee Electric Sterilizer", "category": "feeding", "tags": ["sterilizer", "hygiene", "cleaning"], "price": 850, "description": "Kills 99.9% of bacteria in 5 minutes."},
+    {"id": "p6", "name": "Munchkin Bottle Brush", "category": "feeding", "tags": ["brush", "cleaning", "bottle"], "price": 80, "description": "Soft bristles for scratch-free cleaning."},
+    {"id": "p7", "name": "LEGO Duplo My First Bath Time", "category": "toys", "tags": ["bath", "educational", "toddler"], "price": 250, "description": "Fun floating animal train for bath time."},
+    {"id": "p8", "name": "Fisher-Price Rock-a-Stack", "category": "toys", "tags": ["classic", "motor_skills", "infant"], "price": 150, "description": "Colorful rings to stack and develop coordination."},
+    {"id": "p9", "name": "Braun Digital Thermometer", "category": "health", "tags": ["fever", "monitoring", "safety"], "price": 400, "description": "Professional accuracy for all ages."},
+    {"id": "p10", "name": "WaterWipes Plastic Free", "category": "baby_care", "tags": ["wipes", "eco", "infant"], "price": 150, "description": "The world's purest baby wipes."},
+    {"id": "p11", "name": "Medela Breast Milk Storage Bags", "category": "feeding", "tags": ["breastfeeding", "storage"], "price": 220, "description": "Leak-proof bags for easy storage."},
+    {"id": "p12", "name": "Sophie la Girafe Teether", "category": "toys", "tags": ["teething", "natural", "infant"], "price": 180, "description": "Natural rubber teething toy."},
+    {"id": "p13", "name": "Johnson's Baby Shampoo", "category": "baby_care", "tags": ["shampoo", "bath", "gentle"], "price": 90, "description": "No more tears formula for gentle cleaning."},
+    {"id": "p14", "name": "Dr. Brown's Anti-Colic Bottle", "category": "feeding", "tags": ["bottle", "anti-colic", "feeding"], "price": 320, "description": "Clinically proven to reduce colic."},
+    {"id": "p15", "name": "Vicks BabyRub", "category": "health", "tags": ["soothing", "cold", "aromatic"], "price": 110, "description": "Gentle rub for babies 3 months and older."},
+    {"id": "p16", "name": "Lamaze Play & Grow Freddie the Firefly", "category": "toys", "tags": ["sensory", "plush", "infant"], "price": 210, "description": "High contrast patterns and discovery mirror."},
+    {"id": "p17", "name": "Chicco Digital Scale", "category": "health", "tags": ["weight", "growth", "monitoring"], "price": 650, "description": "Precise weight tracking for babies."},
+    {"id": "p18", "name": "NUK Orthodontic Pacifiers", "category": "baby_care", "tags": ["pacifier", "soothing", "infant"], "price": 140, "description": "Supports healthy oral development."},
+    {"id": "p19", "name": "Beaba Babycook Solo", "category": "feeding", "tags": ["cooking", "food_prep", "toddler"], "price": 1200, "description": "4-in-1 food processor for healthy meals."},
+    {"id": "p20", "name": "Burt's Bees Baby Bee Dusting Powder", "category": "baby_care", "tags": ["powder", "talc-free", "hygiene"], "price": 160, "description": "Natural talc-free powder for soft skin."},
+    {"id": "p21", "name": "Oura Baby Nasal Aspirator", "category": "health", "tags": ["congestion", "cleaning", "nose"], "price": 130, "description": "Gentle relief for stuffy noses."},
+    {"id": "p22", "name": "Skip Hop Moby Bath Scoop", "category": "toys", "tags": ["bath", "organization", "toddler"], "price": 190, "description": "Handy scoop to tidy up bath toys."},
+    {"id": "p23", "name": "Lansinoh Lanolin Nipple Cream", "category": "feeding", "tags": ["breastfeeding", "care"], "price": 280, "description": "Safe for both mom and baby."},
+    {"id": "p24", "name": "Bio-Oil Skincare Oil", "category": "baby_care", "tags": ["skin", "stretch_marks", "mom"], "price": 350, "description": "Helps improve the appearance of scars."},
+    {"id": "p25", "name": "Mustela Gentle Cleansing Gel", "category": "baby_care", "tags": ["bath", "skin", "newborn"], "price": 240, "description": "Cleanses face, body, and hair."}
+]
