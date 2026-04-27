@@ -8,8 +8,13 @@ def estimate_conversion_probability(input_products, bundle, metrics):
     utility = metrics.get("utility", 0)
     price_fit = metrics.get("price_fit", 0)
     
-    # Base score
-    conversion = (0.6 * relevance) + (0.3 * utility) + (0.1 * price_fit)
+    # Base score (Relevance is king for acceptance)
+    conversion = (0.7 * relevance) + (0.2 * utility) + (0.1 * price_fit)
+    
+    # Low quality penalty (Crucial for Baseline differentiation)
+    # If a bundle is random junk, it should have near-zero conversion
+    if relevance < 0.2 and utility < 0.2:
+        conversion -= 0.4
     
     # Price ratio analysis
     base_price = sum(p["price"] for p in input_products)
@@ -33,4 +38,4 @@ def estimate_conversion_probability(input_products, bundle, metrics):
     if any(p["category"] in input_cats for p in bundle):
         conversion += 0.05
         
-    return round(max(0.0, min(1.0, conversion)), 2)
+    return round(max(0.05, min(1.0, conversion)), 2) # 5% floor for "dumb luck"

@@ -1,10 +1,9 @@
-
 PRODUCTS = [
-    {"id": "p1", "name": "Pampers Premium Protection Size 3", "category": "baby_care", "tags": ["diapers", "hygiene", "infant"], "price": 450, "description": "Ultra soft diapers with 12h leak protection."},
-    {"id": "p2", "name": "Huggies Pure Baby Wipes", "category": "baby_care", "tags": ["wipes", "cleaning", "infant"], "price": 120, "description": "Fragrance-free wipes for sensitive skin."},
-    {"id": "p3", "name": "Sudocrem Antiseptic Healing Cream", "category": "baby_care", "tags": ["rash_cream", "health", "skin"], "price": 180, "description": "Soothing cream for diaper rash and skin irritation."},
-    {"id": "p4", "name": "Philips Avent Natural Bottle 260ml", "category": "feeding", "tags": ["bottle", "feeding", "newborn"], "price": 350, "description": "Easy to combine with breastfeeding."},
-    {"id": "p5", "name": "Tommee Tippee Electric Sterilizer", "category": "feeding", "tags": ["sterilizer", "hygiene", "cleaning"], "price": 850, "description": "Kills 99.9% of bacteria in 5 minutes."},
+    {"id": "p1", "name": "Pampers Premium Protection", "category": "baby_care", "tags": ["diapers", "infant", "daily_use", "baby_essentials"], "price": 120, "description": "Softest comfort and best skin protection."},
+    {"id": "p2", "name": "WaterWipes (60pcs)", "category": "baby_care", "tags": ["wipes", "cleaning", "daily_use", "baby_essentials"], "price": 45, "description": "Pure wipes for sensitive skin."},
+    {"id": "p3", "name": "Sudocrem 125g", "category": "baby_care", "tags": ["rash_cream", "hygiene", "daily_use", "baby_essentials"], "price": 55, "description": "Classic barrier cream for nappy rash."},
+    {"id": "p4", "name": "Philips Avent Feeding Bottle", "category": "feeding", "tags": ["bottle", "newborn", "daily_use", "baby_essentials"], "price": 85, "description": "Natural response nipple for easy combining."},
+    {"id": "p5", "name": "Bottle Cleaning Brush", "category": "feeding", "tags": ["brush", "cleaning", "daily_use", "baby_essentials"], "price": 30, "description": "Curved brush head for thorough cleaning."},
     {"id": "p6", "name": "Munchkin Bottle Brush", "category": "feeding", "tags": ["brush", "cleaning", "bottle"], "price": 80, "description": "Soft bristles for scratch-free cleaning."},
     {"id": "p7", "name": "LEGO Duplo My First Bath Time", "category": "toys", "tags": ["bath", "educational", "toddler"], "price": 250, "description": "Fun floating animal train for bath time."},
     {"id": "p8", "name": "Fisher-Price Rock-a-Stack", "category": "toys", "tags": ["classic", "motor_skills", "infant"], "price": 150, "description": "Colorful rings to stack and develop coordination."},
