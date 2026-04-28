@@ -7,7 +7,7 @@
 CareSync AI is a decision-driven bundling engine built for families shopping on Mumzworld. It uses routine-based retrieval and multi-objective ranking to generate synergistic product bundles that optimize for Average Order Value (AOV) and conversion in real-time. It features a full bilingual dashboard (EN/AR) and a built-in A/B Simulation Lab to prove quantifiable business uplift.
 
 🔗 **Live Demo**: [Streamlit App](https://arya-akshat-caresync-ai-dashboard-ofphhi.streamlit.app/)  
-🎥 **Walkthrough Video**: [Watch on Loom](https://www.loom.com/share/3989b7b0215b4377830f1f89715ca3fb)
+🎥 **Walkthrough Video**: [Watch on Loom](https://www.loom.com/share/3989b7b0215b4377830f1f89715ca3fb) | [Backup Video (Local)](./demo.mp4)
 
 ✔ **Runs locally in under 2 minutes**  
 ✔ **Fully Bilingual (English & Arabic)**  
