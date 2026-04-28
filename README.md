@@ -58,8 +58,8 @@ In our A/B Simulation Lab, the CareSync AI engine consistently outperforms the b
 ## 📂 Project Structure
 - `bundle_builder/`: Core logic package (Retrieval, Ranking, Conversion).
 - `dashboard.py`: Bilingual Streamlit interface.
-- `EVALS.md`: Detailed test suite and failure mode analysis.
-- `TRADEOFFS.md`: "Show Your Work" - The iterative journey of the engine.
+- [`EVALS.md`](./EVALS.md): Detailed test suite and failure mode analysis.
+- [`TRADEOFFS.md`](./TRADEOFFS.md): "Show Your Work" - The iterative journey of the engine.
 
 ---
 
