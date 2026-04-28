@@ -3,10 +3,11 @@
 
 # CareSync AI: Decision Intelligence Engine 🚀
 
-CareSync AI is a production-ready package designed to optimize product bundling for **Revenue**, **Relevance**, and **Conversion**. Unlike simple recommendation engines, CareSync acts as a business decision layer that simulates outcomes before suggesting actions.
+### 🏗 Summary
+CareSync AI is a decision-driven bundling engine built for families shopping on Mumzworld. It uses routine-based retrieval and multi-objective ranking to generate synergistic product bundles that optimize for Average Order Value (AOV) and conversion in real-time. It features a full bilingual dashboard (EN/AR) and a built-in A/B Simulation Lab to prove quantifiable business uplift.
 
 🔗 **Live Demo**: [Streamlit App](https://arya-akshat-caresync-ai-dashboard-ofphhi.streamlit.app/)  
-🎥 **Walkthrough Video**: [Loom Link Here](https://www.loom.com/...)
+🎥 **Walkthrough Video**: [Watch on Loom](https://www.loom.com/share/3989b7b0215b4377830f1f89715ca3fb)
 
 ✔ **Runs locally in under 2 minutes**  
 ✔ **Fully Bilingual (English & Arabic)**  
@@ -61,18 +62,14 @@ In our A/B Simulation Lab, the CareSync AI engine consistently outperforms the b
 - `TRADEOFFS.md`: "Show Your Work" - The iterative journey of the engine.
 
 ---
----
 
-## 📝 Submission Metadata
-
-### 🏗 Summary
-CareSync AI is a decision-driven bundling engine for Mumzworld. It uses routine-based retrieval and business-weighted ranking to generate synergistic product bundles that optimize for AOV and conversion. It features a full bilingual dashboard and a Monte Carlo simulation lab to prove business uplift.
-
-### 🤖 AI Usage Note
+## 🤖 AI Usage Note
 - **Stack**: Antigravity (Gemini 3.0 Flash) for architecture and logic implementation.
 - **Method**: Pair-coding for engine development; Agent loops for data synthesis; Iterative prompting for the conversion model calibration.
 
-### ⏱ Time Log
+---
+
+## ⏱ Time Log
 - **Discovery & Scoping**: 1.0 hr (Choosing the Bundling problem).
 - **Core Engine Development**: 2.5 hrs (Retrieval, Ranking, Evals).
 - **Dashboard & Simulation**: 1.0 hr (Streamlit + Monte Carlo Lab).
